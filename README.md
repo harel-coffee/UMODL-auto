@@ -1,6 +1,6 @@
 # A Non-Parameteric-Bayesian-Approach-for-Uplift-Discretization-and-Feature-Selection
 
-This repository contains the code of the paper entitled : Non-Parameteric Bayesian Approach for Uplift Discretization and Feature Selection submitted to  the conference ECML/PKDD 2022.
+This repository contains the code of the paper entitled : A Non-Parametric Bayesian Approach for Uplift Discretization and Feature Selection accepted for presentation in ECML/PKDD 2022.
 
 ## UMODL Search algorithm CODE
 Greedy Search algorithm for UMODL criterion
