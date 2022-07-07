@@ -1,4 +1,4 @@
-# A Non-Parameteric-Bayesian-Approach-for-Uplift-Discretization-and-Feature-Selection
+# A Non-Parametric-Bayesian-Approach-for-Uplift-Discretization-and-Feature-Selection
 
 This repository contains the code of the paper entitled : A Non-Parametric Bayesian Approach for Uplift Discretization and Feature Selection accepted for presentation in ECML/PKDD 2022.
 
