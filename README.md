@@ -9,6 +9,7 @@ Greedy Search algorithm for UMODL criterion
 
 Explanatory variable should be numerical, binary treatment variable {0,1}, and binary outcome variable {0,1}.
 
+#### Feature Selection
 <pre><code>
 from featureSelection import UMODL_FS
 import pandas as pd
