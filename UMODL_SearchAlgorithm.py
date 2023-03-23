@@ -106,6 +106,8 @@ def log_binomial_coefficient(n: int, k: int):
     stop_counter(5)
     return (nf - nkf) - kf
 
+
+
 class Node:
 #     def __init__(self, nitj,IncludedRightFrontier,W_value):
     def __init__(self, data):
@@ -408,12 +410,12 @@ def getNewNullModelCriterionValue(Intervals,data,attributename,TreatmentName,y_n
     
     NullCriterionValue2=log(dataN)+log(2)+log_binomial_coefficient(NT1+1,1)+log_binomial_coefficient(NT0+1,1)+(log_fact(NT1)-(log_fact(NT1Y0)+log_fact(NT1Y1)))+(log_fact(NT0)-(log_fact(NT0Y0)+log_fact(NT0Y1)))
     
-    if Intervals.N==dataN:
-        print("Lengths are equal, Super !")
-    else:
-        print("Intervals.N is ",Intervals.N)
-        print("dataN.N is ",dataN)
-        print("Length are not equal, not good !")
+#     if Intervals.N==dataN:
+#         print("Lengths are equal, Super !")
+#     else:
+#         print("Intervals.N is ",Intervals.N)
+#         print("dataN.N is ",dataN)
+#         print("Length are not equal, not good !")
     
     start = Intervals.head
     summations=0
@@ -515,7 +517,7 @@ def greedySearch(best_merges,Intervals,N):
         if len(best_merges)>0:
             best_merge_tuple = best_merges.pop()
         else:
-            print("Getting out of the loop, no more merges in the list best merges")
+#             print("Getting out of the loop, no more merges in the list best merges")
             break
         if best_merge_tuple[0]>=0:
             IntervalToBeMerged=best_merge_tuple[1]
@@ -565,7 +567,7 @@ def greedySearch(best_merges,Intervals,N):
     #         best_merges=SortedKeyList(best_merges,key=itemgetter(0))
     #         break
         else:
-            print("remanining merges are ngatives")
+#             print("remanining merges are ngatives")
             break
     stop_counter(3)
 def merge(interval,Intervals,NumberOfMerges=1):
@@ -676,8 +678,8 @@ def splitInterval(interval,Intervals, data,i):#i is interval index in IntervalsL
 
             Intervals.MODL_value=Splits[bestSplit]
             splitDone=True
-        else:
-            print("No best split was found ")
+#         else:
+#             print("No best split was found ")
         return splitDone,bestSplit,Intervals
 
 def PostOptimizationToBeRepeated(Intervals,data,i=0):
@@ -819,11 +821,17 @@ def CalculateFeatureLevel(Intervals,method='ED'):
         node = node.next
     return AbsoluteSum    
         
-def ExecuteGreedySearchAndPostOpt(df):  
+def ExecuteGreedySearchAndPostOpt(df):
+#     print("df is ",df)
     
+
     columnName=df.columns[0]
     treatmentCol_name=df.columns[1]
     y_name=df.columns[2]
+    
+    df[treatmentCol_name]=df[treatmentCol_name].astype(int)
+    df[y_name]=df[y_name].astype(int)
+    
     df=df.values.tolist()
     df=sorted(df, key=itemgetter(0))
     Intervals=DLL()
