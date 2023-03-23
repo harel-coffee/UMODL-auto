@@ -10,15 +10,27 @@ Greedy Search algorithm for UMODL criterion
 Explanatory variable should be numerical, binary treatment variable {0,1}, and binary outcome variable {0,1}.
 
 <pre><code>
-from UMODL_SearchAlgorithm import ExecuteGreedySearchAndPostOpt
+from featureSelection import UMODL_FS
 import pandas as pd
 
-df = pd.read_csv(data.csv)
-feature=df[['Variable','treatment','outcome']]
-feature_level,DiscretizationBounds=ExecuteGreedySearchAndPostOpt(feature)
+df=pd.read_csv("data.csv")
 
+#returns a dictionary where keys are the variable names and their values are the feature level
+importantvars=UMODL_FS(df,treatmentName,outcomeName) 
 </code></pre>
 
+#### Discretization
+
+<pre><code>
+from UMODL_Discretization import EncodeDataset
+import pandas as pd
+
+#Return the data transformed using UMODL
+encodedData=EncodeDataset(df,treatmentName,outcomeName,DesiredOutput='EncodedDataset')
+
+#To return only the bounds. 'Bounds' is a dictionary where each key is a variable name and each value is the bounds corresponding to the discretization of the variable
+Bounds=EncodeDataset(df,treatmentName,outcomeName,DesiredOutput='Bounds')
+</code></pre>
 
 ## Requirements
 Python 3.7
