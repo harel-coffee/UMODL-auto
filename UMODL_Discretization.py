@@ -9,7 +9,7 @@ from helperFunction import preprocessData
 
 
 
-def EncodeDataset(df,treatmentName,outcomeName,DesiredOutput='EncodedDataset'):
+def fit_transform(df,treatmentName,outcomeName,DesiredOutput='EncodedDataset'):
     cols=list(df.columns)
 
     cols.remove(treatmentName)
