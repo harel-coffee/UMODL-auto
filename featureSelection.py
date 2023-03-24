@@ -1,3 +1,8 @@
+'''
+Author: Mina Rafla (Orange Innovation Lannion) 
+'''
+
+
 from UMODL_SearchAlgorithm import ExecuteGreedySearchAndPostOpt
 from helperFunction import preprocessData
 import sys
