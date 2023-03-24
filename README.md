@@ -23,14 +23,14 @@ importantvars=UMODL_FS(df,treatmentName,outcomeName)
 #### Discretization
 
 <pre><code>
-from UMODL_Discretization import EncodeDataset
+from UMODL_Discretization import fit_transform
 import pandas as pd
 
 #Return the data transformed using UMODL
-encodedData=EncodeDataset(df,treatmentName,outcomeName,DesiredOutput='EncodedDataset')
+encodedData=fit_transform(df,treatmentName,outcomeName,DesiredOutput='EncodedDataset')
 
 #To return only the bounds. 'Bounds' is a dictionary where each key is a variable name and each value is the bounds corresponding to the discretization of the variable
-Bounds=EncodeDataset(df,treatmentName,outcomeName,DesiredOutput='Bounds')
+Bounds=fit_transform(df,treatmentName,outcomeName,DesiredOutput='Bounds')
 </code></pre>
 
 ## Requirements
