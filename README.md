@@ -1,3 +1,5 @@
+# UPDATE: PLEASE REFER TO THE KUPLIFT LIBRARY for our official implementation: https://github.com/UData-Orange/kuplift
+
 # A Non-Parametric-Bayesian-Approach-for-Uplift-Discretization-and-Feature-Selection
 
 This repository contains the code of the paper entitled : 'A Non-Parametric Bayesian Approach for Uplift Discretization and Feature Selection' accepted for presentation in ECML/PKDD 2022.
